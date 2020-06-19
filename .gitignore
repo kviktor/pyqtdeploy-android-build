@@ -1,0 +1,7 @@
+example/sources/*gz
+build-*
+sysroot-*
+.python-version
+
+__pycache__
+*sw[p|o]
