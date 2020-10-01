@@ -11,7 +11,7 @@ Page {
         Rectangle {
             id: dashboardHeader
             width: mainWindow.width;
-            height: 120
+            height: 300
             color: "green"
 
             Text {

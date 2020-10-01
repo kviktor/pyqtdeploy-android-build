@@ -1,6 +1,6 @@
-# PyQt5 on Android step-by-step
+# PyQt5 applications with pyqtdeploy on Android
 
-This a small guide that explains how to deploy PyQt5 application to Android.
+This a small guide that explains how to deploy PyQt5 application to Android using pyqtdeploy.
 Keep in mind that this is not a Python/Qt/PyQt5 tutorial.
 
 # Reading list
@@ -8,18 +8,19 @@ Keep in mind that this is not a Python/Qt/PyQt5 tutorial.
 Before doing anything read these docs, they get you up to speed how PyQt/Qt/Android works.
 
 - Qt
- - https://doc.qt.io/qt-5/android-getting-started.html
- - https://doc.qt.io/qt-5/deployment-android.html
+  - https://doc.qt.io/qt-5/android-getting-started.html
+  - https://doc.qt.io/qt-5/deployment-android.html
 
 - PyQt
- - https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/ (this is the most useful one)
- - https://www.riverbankcomputing.com/static/Docs/PyQt5/index.html
+  - https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/ (this is the most useful one)
+  - https://www.riverbankcomputing.com/static/Docs/PyQt5/index.html
 
 
 # Setting up the environment
 
 This guide was written using `Ubuntu 20.04` however there is nothing platform specific here
 so it should work on almost any Linux-based system.
+
 
 ## Install required dependencies
 
@@ -28,11 +29,15 @@ These are the required dependencies to build and deploy the example application 
 The following package versions are used in the guide
 - Python 3.7.7
 - Qt 5.13.2
-- PyQt 5.13.2
-- sip 4.9.22
+- PyQt 5.15.1
+- sip 4.9.24
 - Android NDK r20b
 
+
+Note: it's recommended to always use the latest PyQt5 source, it's compatible with older version.
+
 ### System packages
+
 
 ```
 sudo apt-get install clang make zlib1g zlib1g-dev libbz2-dev libssl-dev openjdk-8-jdk build-essential git
@@ -77,8 +82,8 @@ pip install pyqtdeploy pyqt5
 For building the Android sysroot we will need the source packages of the libraries.
 Download the following files and put them in `example/sources/` (the tar.gz/tgz versions)
 
-- sip 4.19.22 https://www.riverbankcomputing.com/software/sip/download
-- PyQt5 5.13.2 https://www.riverbankcomputing.com/software/pyqt/download5
+- sip 4.19.24 https://www.riverbankcomputing.com/software/sip/download
+- PyQt5 5.15.1 https://www.riverbankcomputing.com/software/pyqt/download5 or https://pypi.org/project/PyQt5/5.15.1/#files
 - Python 3.7.7 https://www.python.org/downloads/source/
 - openssl 1.0.2r https://www.openssl.org/source/old/1.0.2/
 
