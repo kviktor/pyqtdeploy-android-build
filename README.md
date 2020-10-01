@@ -31,6 +31,7 @@ The following package versions are used in the guide
 - Qt 5.13.2
 - PyQt 5.15.1
 - sip 4.9.24
+- pyqtdeploy 2.5.1
 - Android NDK r20b
 
 
@@ -74,8 +75,10 @@ You can install them in a virtualenv or not, up to you.
 
 ```
 pip install -U pip
-pip install pyqtdeploy pyqt5
+pip install pyqtdeploy==2.5.1 pyqt5
 ```
+
+Note: the latest pyqtdeploy (3 and above) had some major changes, this guide will be updated to follow up with those.
 
 ## Download source packages
 
