@@ -69,6 +69,12 @@ public class ExampleActivity extends org.qtproject.qt5.android.bindings.QtActivi
         m_notificationManager.notify(1, notification);
 
         Log.i(TAG, "sendNotification finished");
-        return "{\"json_key\":5}";
+
+        try {
+            return new JSONObject().put("success", true).toString();
+        } catch(JSONException e) {
+            // should really not happen
+            return "{}";
+        }
     }
 }
